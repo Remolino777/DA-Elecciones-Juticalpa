@@ -1,0 +1,73 @@
+*{
+	box-sizing: border-box;	    
+	margin: 5px;
+	font-family: 'Montserrat', sans-serif;	
+    margin-top: 0px; 
+}	
+
+.body {
+    display: flex;
+    width: 90%;
+}
+
+/* Estilos para el menú flotante */
+.menu { 
+    position: fixed;      
+    background-color: #333;
+    width: 100%;    
+    z-index: 1000;
+    display: flex;    
+    justify-content: flex-end; 
+    padding-right: 30px;  
+    margin-top: 0px; 
+}
+
+.menu button {
+    align-content: center;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;    
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el contenido de la página */
+
+.analysis{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;    
+    align-items:center;
+    height: 3300px;
+}
+
+.cont{
+    display: fixed;
+    left: 50;
+    top: 200px;
+    width: 80%;
+    background-color: #fff;
+}
+.text01{
+    margin: 50px;
+}
+.intro{  
+    margin-top: 100px;     
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    height: 800px;
+    }
+.urbano{
+    background-color: rgb(78, 78, 92);   
+    text-align: center; 
+    }
+.rural{
+    background-color: rgb(93, 93, 199);
+    height: 300px;
+    }
+.img{
+    
+    width: 80%;
+
+}
