@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--Primera  analisis de datos para resultado de elecciones en juticalpa
+    elaborado en Quicksight y cargado en una pagina estatica en AWS s3  -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <script src="script.js"></script>    
+
     
 </head>
 <body>
@@ -64,16 +68,35 @@
                 <br> <hr><hr>
                 <h2>Primero, segundo y tercer lugar por centro de votacion y cantidad de votos area rural </h2>              
                 <hr><hr>
-                <h2>Partido Nacional </h2>              
-
-                <img class="img" src="/img/Untitled-1_0001s_0001_pn vs r.jpg">
                 <br>
-                <h2>Partido Libre </h2>  
-                <img class="img" src="/img/Untitled-1_0001s_0000_1 vs R libre.jpg">
+                <!--interactive mobile window -->                
+                <div class="i_doc">
+                    
+                    <div>
+                        <select id="opciones"  onchange="mostrarSeleccion()" placeholder="Seleciona Partido" style="width:350px; 
+                        text-align:center;margin-bottom: 20px; border-radius: 5px; border: none; background-color: rgb(207, 253, 160);
+                        margin-top: 50px; font-size: 30px; padding: 10px; " required>
+                            <option value " " disabled selected>Seleciona Partido</option>
+                            <option value="CC">Partido Liberal</option>
+                            <option value="CE">Partido Nacional</option>
+                            <option value="PP">Partido Libre</option>                            
+                        </select>
+                    </div>                     
+                </div>
                 <br>
-                <h2>Partido Liberal </h2>  
-                <img class="img" src="/img/Untitled-1_0001s_0002_liberal vs R.jpg">
-                <br> <hr><hr>
+                     
+                <div>                   
+                    
+                    <div  class="ventana"> 
+                        <h2>Partido Nacional </h2>  
+                        <img class="i_nacional" src="/img/Untitled-1_0001s_0001_pn vs r.jpg">
+                        <h2>Partido Libre </h2>  
+                        <img class="i_libre"  src="/img/Untitled-1_0001s_0000_1 vs R libre.jpg">                    
+                        <h2>Partido Liberal </h2>  
+                        <img class="i_liberal" src="/img/Untitled-1_0001s_0002_liberal vs R.jpg">
+                    </div>
+                    <br> <hr><hr>
+                </div>
                 <h2>Abstencionismo por centro de votacion </h2>              
                 <hr><hr>
                 <br>

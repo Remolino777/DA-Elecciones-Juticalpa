@@ -3,6 +3,9 @@
 	margin: 5px;
 	font-family: 'Montserrat', sans-serif;	
     margin-top: 0px; 
+    text-decoration: none;
+    list-style: none;  
+
 }	
 
 .body {
@@ -68,9 +71,11 @@
     background-color: rgb(255, 255, 255);
     text-align: center;     
     }
-.img{    
-    width: 80%;
+
+.img{      
+    width: 80%;  
 }
+
 .logo{    
     margin-top: 40px;
     width: 400px;
@@ -86,3 +91,33 @@
     padding: 10px;
     
 }
+/* ---------------imagenes ventana mobil ---------------*/
+.ventana {
+    position: relative;    
+    width: 80%;
+    padding-top: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.i_nacional{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-750px);
+}
+.i_liberal{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.i_libre{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(750px);
+}
+
+
