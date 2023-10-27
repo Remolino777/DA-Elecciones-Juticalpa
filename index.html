@@ -19,7 +19,7 @@
     <div class="analysis">
         <div class="cont">
             <div class="intro" id="sec1">
-                <h1 class="text01">Analisis de los resultados de las elecciones municipales en
+                <h1 class="text01">Analisis de los resultados de las elecciones municipales del 27 de Enero
                     </h1>                
                 <br>
                 <img class="logo" src="/img/LogoJuticalpa 3.jpg">
@@ -60,40 +60,36 @@
                 <img class="img" src="/img/Untitled-1_0002s_0000s_0000_Layer 1.jpg">
                 <br>
                 <hr>
-                <br>
-                <h3>Primero, segundo y tercer lugar por centro de votacion area rural </h3> <hr> <br>              
-                <img class="img" src="/img/Untitled-1_0002s_0000s_0000_Layer 1.jpg">
-                <br>
+                <br>             
 
                 <br> <hr><hr>
                 <h2>Primero, segundo y tercer lugar por centro de votacion y cantidad de votos area rural </h2>              
                 <hr><hr>
                 <br>
                 <!--interactive mobile window -->                
-                <div class="i_doc">
+                <div style="width:100%;">
                     
                     <div>
                         <select id="opciones"  onchange="mostrarSeleccion()" placeholder="Seleciona Partido" style="width:350px; 
-                        text-align:center;margin-bottom: 20px; border-radius: 5px; border: none; background-color: rgb(207, 253, 160);
-                        margin-top: 50px; font-size: 30px; padding: 10px; " required>
+                        text-align:center;margin-bottom: 10px; border-radius: 5px; border: none; background-color: rgb(207, 253, 160);
+                        margin-top: 5px; font-size: 30px; padding: 10px; " required>
                             <option value " " disabled selected>Seleciona Partido</option>
-                            <option value="CC">Partido Liberal</option>
-                            <option value="CE">Partido Nacional</option>
-                            <option value="PP">Partido Libre</option>                            
+                            <option value="i_liberal" >Partido Liberal</option>
+                            <option value="i_nacional" >Partido Nacional</option>
+                            <option value="i_libre" >Partido Libre</option>                            
                         </select>
                     </div>                     
-                </div>
-                <br>
-                     
-                <div>                   
+                
+                    <br>                
+                                 
                     
                     <div  class="ventana"> 
-                        <h2>Partido Nacional </h2>  
-                        <img class="i_nacional" src="/img/Untitled-1_0001s_0001_pn vs r.jpg">
-                        <h2>Partido Libre </h2>  
-                        <img class="i_libre"  src="/img/Untitled-1_0001s_0000_1 vs R libre.jpg">                    
-                        <h2>Partido Liberal </h2>  
-                        <img class="i_liberal" src="/img/Untitled-1_0001s_0002_liberal vs R.jpg">
+                        
+                        <img class="i_nacional" id="i_nacional" src="/img/Untitled-1_0001s_0001_pn vs r.jpg">
+                         
+                        <img class="i_libre" id="i_libre" src="/img/Untitled-1_0001s_0000_1 vs R libre.jpg">                    
+                          
+                        <img class="i_liberal" id="i_liberal" src="/img/Untitled-1_0001s_0002_liberal vs R.jpg">
                     </div>
                     <br> <hr><hr>
                 </div>
@@ -111,18 +107,30 @@
 
         </div>
         <div class="footer">
-            <h4>Analisis creado en AWS por Javier Hernandez - 2023</h2>
-
+            <h4>Powered by AWS made by r3mo - 2023</h4>
         </div>
-        
-        
 
-        </div>
+        
 
 
 
         
     </div>
+    <script>
+        const select = document.getElementById('opciones');
+
+        select.addEventListener('change',function(){
+            const selectedOption = select.options[select.selectedIndex].value;
+            const images = document.querySelectorAll(".i_nacional, .i_libre, .i_liberal");
+
+            images.forEach(function(img) {
+                img.style.display = 'none';
+            });
+            const selectedImage = document.getElementById(selectedOption);
+            selectedImage.style.display = "block";
+        });
+
+    </script>
     
     
 </body>

@@ -93,31 +93,34 @@
 }
 /* ---------------imagenes ventana mobil ---------------*/
 .ventana {
-    position: relative;    
-    width: 80%;
-    padding-top: 50%;
-    margin: 0 auto;
-    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: auto;
+    height: 80vh;        
 }
 .i_nacional{
+    display: none;    
     position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transform: translateX(-750px);
+    width: 80%;    
+    
+    
 }
 .i_liberal{
+    display: none;
     position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
+    height: auto;
+    margin: 0 auto;
+    
 }
 .i_libre{
-    position: absolute;
+    position: absolute;    
+    display: none;
     width: 100%;
-    top: 0;
-    left: 0;
-    transform: translateX(750px);
+    
+    
 }
 
 
